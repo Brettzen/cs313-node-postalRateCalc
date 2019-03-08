@@ -6,6 +6,17 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form action="/calculate" method="post">
+    <label for="weight">Item Weight</label>
+    <p><input name="weight" id="weight" placeholder="oz." required></p>
+    <label for="item">Item Type</label>
+    <p><select name="item" id="item">
+    	<option value="1">Letters (Stamped)</option>
+    	<option value="2">Letters (Metered)</option>
+    	<option value="3">Large Envelopes (Flats)</option>
+    	<option value="4">First-Class Package Service&mdash;Retail</option>
+    </select></p>
+    <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
